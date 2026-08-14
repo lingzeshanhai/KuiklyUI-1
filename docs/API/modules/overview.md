@@ -12,3 +12,4 @@
 * [SnapshotModule](snapshot.md)
 * [CodecModule](codec.md)
 * [CalendarModule](calendar.md)
+* [SseModule](sse.md)

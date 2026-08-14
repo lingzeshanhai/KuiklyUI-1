@@ -18,6 +18,7 @@ import { IKuiklyRenderModuleExport } from './base/IKRModuleExport';
 import { KRSnapshotModule } from './internal/KRSnapshotModule';
 import { KRLogModuleArkTS } from './KRLogModuleArkTS';
 import { KRNotifyModule } from './KRNotifyModule';
+import { KRSseModule } from './KRSseModule';
 import { KRExceptionModule } from './KRExceptionModule';
 import { KRNetworkModule } from './KRNetworkModule';
 import { KRRouterModule } from './KRRouterModule';
@@ -46,6 +47,9 @@ export class ModulesRegisterEntry {
     });
     KRNativeManager.getInstance().registerModuleCreator(KRNotifyModule.MODULE_NAME, (): IKuiklyRenderModuleExport => {
       return new KRNotifyModule();
+    });
+    KRNativeManager.getInstance().registerModuleCreator(KRSseModule.MODULE_NAME, (): IKuiklyRenderModuleExport => {
+      return new KRSseModule();
     });
     KRNativeManager.getInstance().registerModuleCreator(KRLogModuleArkTS.MODULE_NAME, (): IKuiklyRenderModuleExport => {
       return new KRLogModuleArkTS();

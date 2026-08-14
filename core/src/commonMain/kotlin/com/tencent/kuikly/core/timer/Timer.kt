@@ -113,6 +113,10 @@ fun clearTimeout(timeoutRef: String) {
     GlobalFunctions.destroyGlobalFunction(BridgeManager.currentPageId, timeoutRef)
 }
 
+fun clearTimeout(pagerId: String, timeoutRef: String) {
+    GlobalFunctions.destroyGlobalFunction(pagerId, timeoutRef)
+}
+
 fun PagerScope.clearTimeout(timeoutRef: String) {
     // 用currentPageId兜底，以保持向前兼容
     val pagerId = this.pagerId.ifEmpty { BridgeManager.currentPageId }

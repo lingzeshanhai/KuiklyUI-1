@@ -323,6 +323,13 @@ internal class ExampleIndexPage : BasePager() {
             declarativeExampleUrl = generateJumpUrl("BridgeCallStressTestPage")
         })
 
+        itemList.add(ExampleItemData().apply {
+            avatarText = "SS"
+            titleText = "SSE 长连接"
+            subtitleText = "SseModule：服务端事件流推送，支持断线自动重连（指数退避）、Last-Event-ID、心跳看门狗"
+            declarativeExampleUrl = generateJumpUrl("SseDemoPage")
+        })
+
         // 仅在微信小程序平台展示 WX 组件 / API 示例
         if (pageData.params.optString(IS_MINI_PROGRAM) == "1") {
             itemList.add(ExampleItemData().apply {

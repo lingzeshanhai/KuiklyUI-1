@@ -186,7 +186,7 @@ export const zhSidebar = sidebar({
             text: "Module",
             prefix: "/API/modules",
             children: [
-                "overview.md", 'memory-cache.md', "sp.md", "router.md", "network.md", "notify.md", "snapshot.md","codec.md","calendar.md", "performance.md"
+                "overview.md", 'memory-cache.md', "sp.md", "router.md", "network.md", "notify.md", "snapshot.md","codec.md","calendar.md", "performance.md", "sse.md"
             ]
         }
     ],

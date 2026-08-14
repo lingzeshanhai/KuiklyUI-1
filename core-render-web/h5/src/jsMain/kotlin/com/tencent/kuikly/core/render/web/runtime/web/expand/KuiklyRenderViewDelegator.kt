@@ -32,6 +32,7 @@ import com.tencent.kuikly.core.render.web.expand.module.KRLogModule
 import com.tencent.kuikly.core.render.web.expand.module.KRMemoryCacheModule
 import com.tencent.kuikly.core.render.web.expand.module.KRNetworkModule
 import com.tencent.kuikly.core.render.web.expand.module.KRNotifyModule
+import com.tencent.kuikly.core.render.web.expand.module.KRSseModule
 import com.tencent.kuikly.core.render.web.expand.module.KRPerformanceModule
 import com.tencent.kuikly.core.render.web.expand.module.KRRouterModule
 import com.tencent.kuikly.core.render.web.expand.module.KRSharedPreferencesModule
@@ -419,6 +420,9 @@ class KuiklyRenderViewDelegator(private val delegate: KuiklyRenderViewDelegatorD
             }
             moduleExport(KRNetworkModule.MODULE_NAME) {
                 KRNetworkModule()
+            }
+            moduleExport(KRSseModule.MODULE_NAME) {
+                KRSseModule()
             }
             moduleExport(H5WindowResizeModule.MODULE_NAME) {
                 H5WindowResizeModule()

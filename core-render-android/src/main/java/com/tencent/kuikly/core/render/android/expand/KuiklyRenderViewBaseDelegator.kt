@@ -51,6 +51,7 @@ import com.tencent.kuikly.core.render.android.expand.module.KRNetworkModule
 import com.tencent.kuikly.core.render.android.expand.module.KRNotifyModule
 import com.tencent.kuikly.core.render.android.expand.module.KRPerformanceModule
 import com.tencent.kuikly.core.render.android.expand.module.KRRouterModule
+import com.tencent.kuikly.core.render.android.expand.module.KRSseModule
 import com.tencent.kuikly.core.render.android.expand.module.KRSnapshotModule
 import com.tencent.kuikly.core.render.android.expand.module.KRReflectionModule
 import com.tencent.kuikly.core.render.android.expand.module.KRVsyncModule
@@ -479,6 +480,9 @@ open class KuiklyRenderViewBaseDelegator(private val delegate: KuiklyRenderViewB
             }
             moduleExport(KRNetworkModule.MODULE_NAME) {
                 KRNetworkModule()
+            }
+            moduleExport(KRSseModule.MODULE_NAME) {
+                KRSseModule()
             }
             moduleExport(KRCalendarModule.MODULE_NAME) {
                 KRCalendarModule()
